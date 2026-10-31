@@ -102,8 +102,8 @@ function sceneContent(n) {
     case 'hr-support': return `<div class="policy-scene policy-scene--agreement">
       <div class="policy-scene__head" data-in><p>PERFORMANCE SYSTEM & MANDATORY MEMBER AGREEMENT <span>SEASON 2026/2027</span></p><h1>Sign the<br><em>Member Charter.</em></h1></div>
       <div class="policy-agreement__body">
-        <div class="policy-agreement__copy" data-in><span class="policy-agreement__label">MANDATORY NEXT STEP</span><p>Every accepted committee member is required to review and sign the official IEEE Zewail City 2026/2027 Member Agreement Form within <strong>24 hours.</strong></p><h2>Requirements for Submission</h2><ul><li>Use your official university email <b>(@zewailcity.edu.eg)</b></li><li>Acknowledge each ethics, confidentiality, and evaluation clause individually</li><li>Type your full name as your official digital signature</li></ul></div>
-        <div class="policy-agreement__form" data-in><div class="policy-agreement__qr" aria-label="QR code placeholder"><span>QR CODE</span></div><div class="policy-agreement__link"><span>OFFICIAL FORM LINK</span><strong>Link to be provided</strong></div></div>
+        <div class="policy-agreement__copy" data-in><span class="policy-agreement__label">MANDATORY NEXT STEP</span><p>Every accepted committee member is required to review and sign the official IEEE Zewail City 2026/2027 Member Agreement Form within <strong>24 hours.</strong></p><div class="policy-agreement__duration" aria-hidden="true"><strong>24</strong><span>HOURS</span></div></div>
+        <div class="policy-agreement__requirements" data-in><h2>Requirements for Submission</h2><ol><li><span>01</span><p>Use your official university email <b>(@zewailcity.edu.eg)</b></p></li><li><span>02</span><p>Acknowledge each ethics, confidentiality, and evaluation clause individually</p></li><li><span>03</span><p>Type your full name as your official digital signature</p></li></ol></div>
       </div>
       <div class="policy-agreement__deadline" data-in><span>SUBMISSION DEADLINE</span><strong>Sunday, November 1, 2026</strong><b>11:59 PM · CAIRO TIME</b></div>
     </div>`;

@@ -41,23 +41,21 @@
 .policy-academic span{font:500 10px Mono,monospace;color:#a9c2d2;letter-spacing:.09em}
 .policy-academic strong{font:700 45px/.8 Barlow,sans-serif;color:#ffd264;white-space:nowrap}
 .policy-academic p{font-size:14px;line-height:1.35}
-.policy-agreement__body{display:grid;grid-template-columns:1fr minmax(230px,.44fr);gap:clamp(25px,4vw,65px);flex:1;min-height:0}
-.policy-agreement__copy{border-top:3px solid #ffd264;padding-top:14px}
+.policy-agreement__body{display:grid;grid-template-columns:minmax(0,1fr) minmax(390px,.9fr);gap:clamp(25px,4vw,65px);flex:1;min-height:0}
+.policy-agreement__copy{position:relative;display:flex;flex-direction:column;align-items:flex-start;border-top:3px solid #ffd264;padding-top:14px;overflow:hidden}
 .policy-agreement__label{font:500 10px Mono,monospace;color:#ffd264;letter-spacing:.11em}
-.policy-agreement__copy>p{font-size:clamp(17px,1.6vw,22px);line-height:1.38;max-width:740px;margin:9px 0 18px}
+.policy-agreement__copy>p{font-size:clamp(17px,1.6vw,22px);line-height:1.38;max-width:740px;margin:9px 0 0}
 .policy-agreement__copy>p strong{color:#ffd264}
-.policy-agreement__copy h2{font-size:28px;margin-bottom:8px}
-.policy-agreement__copy ul{list-style:none;margin:0;padding:0;max-width:760px}
-.policy-agreement__copy li{position:relative;border-top:1px solid #42617a;padding:7px 0 7px 20px;font-size:13px;line-height:1.3}
-.policy-agreement__copy li:before{content:'↗';position:absolute;left:0;color:#ffd264}
-.policy-agreement__form{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#0b263e;border:1px solid #42617a;min-height:0;padding:12px}
-.policy-agreement__qr{display:grid;place-items:center;aspect-ratio:1;width:min(100%,170px);background:#f4f1e9;color:#071a2d;position:relative}
-.policy-agreement__qr:before,.policy-agreement__qr:after{content:'';position:absolute;inset:12px;border:2px solid #071a2d}
-.policy-agreement__qr:after{inset:25px;border:1px solid #071a2d;opacity:.3}
-.policy-agreement__qr span{font:700 27px Barlow,sans-serif;z-index:1;background:#f4f1e9;padding:5px}
-.policy-agreement__link{text-align:center;overflow-wrap:anywhere}
-.policy-agreement__link span{display:block;color:#a9c2d2;font:500 10px Mono,monospace;letter-spacing:.08em}
-.policy-agreement__link strong{display:block;font-size:14px;margin-top:2px;color:#ffd264}
+.policy-agreement__duration{display:flex;align-items:baseline;gap:12px;margin-top:auto;color:#ffd264}
+.policy-agreement__duration strong{font:700 clamp(115px,13vw,190px)/.76 Barlow,sans-serif;letter-spacing:-.055em}
+.policy-agreement__duration span{font:700 clamp(30px,3vw,43px)/1 Barlow,sans-serif}
+.policy-agreement__requirements{border-top:3px solid #ffd264;padding-top:14px}
+.policy-agreement__requirements h2{font-size:clamp(31px,3vw,42px);margin:0 0 11px}
+.policy-agreement__requirements ol{list-style:none;margin:0;padding:0}
+.policy-agreement__requirements li{display:grid;grid-template-columns:45px 1fr;gap:13px;align-items:start;border-top:1px solid #42617a;padding:12px 0}
+.policy-agreement__requirements li span{font:700 34px/.9 Barlow,sans-serif;color:#ffd264}
+.policy-agreement__requirements li p{font-size:15px;line-height:1.35}
+.policy-agreement__requirements li b{font-weight:600;color:#ffd264}
 .policy-agreement__deadline{display:flex;align-items:center;gap:20px;flex:none;min-height:66px;border-top:1px solid #42617a;border-bottom:1px solid #42617a}
 .policy-agreement__deadline span{font:500 10px Mono,monospace;letter-spacing:.08em;color:#a9c2d2}
 .policy-agreement__deadline strong{font:700 clamp(27px,3vw,38px)/.85 Barlow,sans-serif;text-transform:uppercase;color:#ffd264}
@@ -93,7 +91,9 @@
   .policy-academic span{width:100%}
   .policy-agreement__body{display:block}
   .policy-agreement__copy>p{font-size:18px}
-  .policy-agreement__form{margin-top:20px;padding:25px;min-height:255px}
+  .policy-agreement__duration{margin:26px 0 21px}
+  .policy-agreement__duration strong{font-size:115px}
+  .policy-agreement__requirements{padding-top:15px}
   .policy-agreement__deadline{flex-wrap:wrap;gap:8px 15px;padding:15px 0}
   .policy-agreement__deadline span{width:100%}
   .policy-agreement__deadline b{margin-left:0}
