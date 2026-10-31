@@ -45,8 +45,12 @@
 .leader-person__meta strong{font-size:27px}
 .leader-person__meta small{font-size:12px}
 .transition{z-index:45;background:#ffc845}
-.transition__mark{position:relative;z-index:2;width:min(46vw,470px);opacity:1;visibility:visible;clip-path:none;filter:brightness(0) saturate(100%) invert(8%) sepia(50%) saturate(979%) hue-rotate(170deg) brightness(74%)}
-.transition__mark img{width:100%;height:auto}
+.transition__mark{position:relative;z-index:2;width:min(46vw,470px);aspect-ratio:800/461;filter:brightness(0) saturate(100%) invert(8%) sepia(50%) saturate(979%) hue-rotate(170deg) brightness(74%)}
+.transition__piece{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0}
+.transition__piece:nth-child(1){clip-path:inset(0 74.7% 0 0)}
+.transition__piece:nth-child(2){clip-path:inset(0 49.7% 0 24.7%)}
+.transition__piece:nth-child(3){clip-path:inset(0 24.7% 0 49.7%)}
+.transition__piece:nth-child(4){clip-path:inset(0 0 0 74.7%)}
 .hr-scene__rail{height:73%}
 .hr-scene__emblem{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
 .hr-scene__emblem img{width:min(18vw,230px);max-height:150px;object-fit:contain;object-position:left center;opacity:.75}

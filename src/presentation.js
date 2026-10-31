@@ -182,18 +182,20 @@ function goTo(n) {
   transitioning = true;
   const direction = n >= current ? 1 : -1;
   gsap.set(veil, { display: 'flex', xPercent: -104 * direction });
-  gsap.set('.transition__mark', { scale: .78, rotate: -9, opacity: 1, visibility: 'visible', clipPath: 'none' });
+  gsap.set('.transition__mark', { scale: .88, rotate: -5 });
+  gsap.set('.transition__piece', { opacity: 0, y: 28, scale: 1.08 });
   const tl = gsap.timeline({ onComplete: () => {
     gsap.set(veil, { display: 'none' });
     transitioning = false;
     if (queued !== null && queued !== current) { const next = queued; queued = null; goTo(next); }
     else queued = null;
   } });
-  tl.to(veil, { xPercent: 0, duration: .55, ease: 'power3.inOut' })
-    .to('.transition__mark', { scale: 1, rotate: 0, duration: .55, ease: 'back.out(1.4)' }, '<')
+  tl.to(veil, { xPercent: 0, duration: .48, ease: 'power3.inOut' })
+    .to('.transition__mark', { scale: 1, rotate: 0, duration: .65, ease: 'power3.out' }, '<')
+    .to('.transition__piece', { opacity: 1, y: 0, scale: 1, duration: .45, stagger: .11, ease: 'power3.out' }, '-=.52')
     .add(() => render(n))
-    .to('.transition__mark', { scale: 1.035, duration: .36, ease: 'sine.inOut' }, '+=.16')
-    .to(veil, { xPercent: 104 * direction, duration: .55, ease: 'power3.inOut' }, '+=.05');
+    .to('.transition__mark', { scale: 1.025, duration: .25, ease: 'sine.inOut' }, '+=.18')
+    .to(veil, { xPercent: 104 * direction, duration: .5, ease: 'power3.inOut' }, '+=.05');
 }
 
 function openOverview() {
