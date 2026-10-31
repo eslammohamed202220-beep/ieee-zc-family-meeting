@@ -182,15 +182,18 @@ function goTo(n) {
   transitioning = true;
   const direction = n >= current ? 1 : -1;
   gsap.set(veil, { display: 'flex', xPercent: -104 * direction });
+  gsap.set('.transition__mark', { scale: .72, rotate: -9, autoAlpha: 0, clipPath: 'inset(0 100% 0 0)' });
   const tl = gsap.timeline({ onComplete: () => {
     gsap.set(veil, { display: 'none' });
     transitioning = false;
     if (queued !== null && queued !== current) { const next = queued; queued = null; goTo(next); }
     else queued = null;
   } });
-  tl.to(veil, { xPercent: 0, duration: .38, ease: 'power3.inOut' })
+  tl.to(veil, { xPercent: 0, duration: .48, ease: 'power3.inOut' })
+    .to('.transition__mark', { scale: 1, rotate: 0, autoAlpha: 1, clipPath: 'inset(0 0% 0 0)', duration: .48, ease: 'power3.out' }, '-=.18')
     .add(() => render(n))
-    .to(veil, { xPercent: 104 * direction, duration: .42, ease: 'power3.inOut' });
+    .to('.transition__mark', { scale: 1.08, autoAlpha: 0, duration: .28, ease: 'power2.in' }, '+=.06')
+    .to(veil, { xPercent: 104 * direction, duration: .55, ease: 'power3.inOut' }, '-=.15');
 }
 
 function openOverview() {
