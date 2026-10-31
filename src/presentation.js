@@ -3,6 +3,7 @@ import './presentation-rest.css';
 import './presentation-responsive.css';
 import './presentation-updates.css';
 import './presentation-polish.css';
+import './hr-agreement.css';
 import { gsap } from 'gsap';
 import {
   slides, board, committees, route, history as milestones, ieeeDoes,
@@ -76,16 +77,36 @@ function sceneContent(n) {
 
     case 'feedback': return `<div class="feedback-scene">${intro('YOUR VOICE MATTERS', 'Feedback is part<br>of how we grow.', 'We’ll make space for ideas and honest feedback throughout the season.')}<div class="feedback-scene__timeline">${feedback.map((part, i) => `<div class="feedback-stop" data-in><span class="feedback-stop__index">${pad(i + 1)}</span><small>${part.phase}</small><h2>${part.title}</h2><p>${part.detail}</p></div>`).join('')}</div><p class="feedback-scene__note" data-in>Your feedback will help us improve—not just this meeting, but the whole season.</p></div>`;
 
-    case 'hr-conduct':
-    case 'hr-evaluation':
-    case 'hr-support': {
-      const data = {
-        'hr-conduct': { n: '01', title: 'Team expectations<br>& guidelines.', lead: 'A shared understanding of how we work together.', points: ['Team conduct', 'Attendance & participation', 'Communication standards'] },
-        'hr-evaluation': { n: '02', title: 'How contributions<br>are evaluated.', lead: 'The HR team will walk us through the criteria and review process.', points: ['Evaluation criteria', 'Review process', 'Recognition'] },
-        'hr-support': { n: '03', title: 'Questions, support<br>& next steps.', lead: 'Where to ask, how to share feedback, and what happens next.', points: ['Feedback process', 'Support channels', 'Q&A'] },
-      }[item.kind];
-      return `<div class="hr-scene"><div class="hr-scene__rail" data-in><div class="hr-scene__emblem"><img src="${asset('assets/ieee-zc-white.png')}" alt="" /><strong>PEOPLE<br>& CULTURE</strong></div><small>PRESENTED BY THE HR COMMITTEE</small><b>${data.n} / 03</b></div><div class="hr-scene__content"><div class="hr-scene__mobile-mark"><img src="${asset('assets/ieee-zc-white.png')}" alt="" /><strong>PEOPLE & CULTURE</strong></div>${kicker('HR COMMITTEE')}<h1 data-in>${data.title}</h1><p data-in>${data.lead}</p><div class="hr-scene__list">${data.points.map((point, i) => `<div data-in><span>${pad(i + 1)}</span><strong>${point}</strong></div>`).join('')}</div></div></div>`;
-    }
+    case 'hr-conduct': return `<div class="policy-scene policy-scene--matrix">
+      <div class="policy-scene__head" data-in><p>PERFORMANCE SYSTEM & MANDATORY MEMBER AGREEMENT <span>SEASON 2026/2027</span></p><h1>Monthly 100-Point<br><em>Evaluation Matrix.</em></h1></div>
+      <div class="policy-matrix">
+        <div class="policy-matrix__total" data-in><span>MONTHLY TOTAL</span><strong>100</strong><small>POINTS</small><div class="policy-matrix__total-rule"></div></div>
+        <div class="policy-matrix__rows">
+          <div class="policy-matrix__row" data-in><div class="policy-matrix__score">25<span>PTS</span></div><div class="policy-matrix__copy"><h2>Meeting Attendance</h2><div class="policy-matrix__track"><span class="policy-matrix__bar" style="--share:25%"></span></div></div></div>
+          <div class="policy-matrix__row" data-in><div class="policy-matrix__score">50<span>PTS</span></div><div class="policy-matrix__copy"><h2>Task Execution</h2><p>10 Delivery <i>+</i> 10 Formal Mail <i>+</i> 20 Quality <i>+</i> 10 Officers’ Task</p><div class="policy-matrix__track"><span class="policy-matrix__bar" style="--share:50%"></span></div></div></div>
+          <div class="policy-matrix__row" data-in><div class="policy-matrix__score">25<span>PTS</span></div><div class="policy-matrix__copy"><h2>Interaction, Professional Conduct<br>& Public Advocacy</h2><div class="policy-matrix__track"><span class="policy-matrix__bar" style="--share:25%"></span></div></div></div>
+        </div>
+      </div>
+      <div class="policy-bonus" data-in><strong>Bonus Points</strong><span><b>+10</b> Early High-Quality Delivery</span><span><b>+5</b> HR</span><span><b>+5</b> Board</span></div>
+    </div>`;
+
+    case 'hr-evaluation': return `<div class="policy-scene policy-scene--rules">
+      <div class="policy-scene__head" data-in><p>PERFORMANCE SYSTEM & MANDATORY MEMBER AGREEMENT <span>SEASON 2026/2027</span></p><h1>Rules, Recognition<br><em>& Academic Guarantee.</em></h1></div>
+      <div class="policy-rules__columns">
+        <section class="policy-rules__section" data-in><h2>Task & Apology Rules</h2><div class="policy-rules__line"><strong>Late Submissions</strong><p><b>−15 pts/day.</b> Strict 48-hour cut-off: Direct Zero + Warning.</p></div><div class="policy-rules__line"><strong>Monthly Apologies</strong><p>Exactly <b>2 allowed per month:</b> 1 meeting, 1 task.</p></div><div class="policy-rules__line"><strong>Warning Limit</strong><p>Maximum <b>2 warnings per month.</b> 3rd warning leads to termination.</p></div></section>
+        <section class="policy-rules__section" data-in><h2>Certification Tiers <span>70% MINIMUM FLOOR</span></h2><div class="policy-rules__tier"><b>95% – 100%+</b><p>With Highest Distinction <small>Executive Recommendation & Leadership Priority</small></p></div><div class="policy-rules__tier"><b>85% – 94%</b><p>With Distinction</p></div><div class="policy-rules__tier"><b>70% – 84%</b><p>Merit of Contribution</p></div><div class="policy-rules__tier"><b>Below 70%</b><p>Incomplete tenure <small>No certificate issued</small></p></div></section>
+      </div>
+      <div class="policy-academic" data-in><span>ACADEMIC GUARANTEE</span><strong>100% OFF</strong><p>During Pre-Midterm Week, Midterm Weeks, and Final Exam periods.</p></div>
+    </div>`;
+
+    case 'hr-support': return `<div class="policy-scene policy-scene--agreement">
+      <div class="policy-scene__head" data-in><p>PERFORMANCE SYSTEM & MANDATORY MEMBER AGREEMENT <span>SEASON 2026/2027</span></p><h1>Sign the<br><em>Member Charter.</em></h1></div>
+      <div class="policy-agreement__body">
+        <div class="policy-agreement__copy" data-in><span class="policy-agreement__label">MANDATORY NEXT STEP</span><p>Every accepted committee member is required to review and sign the official IEEE Zewail City 2026/2027 Member Agreement Form within <strong>24 hours.</strong></p><h2>Requirements for Submission</h2><ul><li>Use your official university email <b>(@zewailcity.edu.eg)</b></li><li>Acknowledge each ethics, confidentiality, and evaluation clause individually</li><li>Type your full name as your official digital signature</li></ul></div>
+        <div class="policy-agreement__form" data-in><div class="policy-agreement__qr" aria-label="QR code placeholder"><span>QR CODE</span></div><div class="policy-agreement__link"><span>OFFICIAL FORM LINK</span><strong>Link to be provided</strong></div></div>
+      </div>
+      <div class="policy-agreement__deadline" data-in><span>SUBMISSION DEADLINE</span><strong>Sunday, November 1, 2026</strong><b>11:59 PM · CAIRO TIME</b></div>
+    </div>`;
 
     case 'last-question': return `<div class="last-scene">${kicker('ONE LAST QUESTION')}<h1 data-in>What will make<br>this season worth<br><em>remembering?</em></h1><p data-in>Think about one thing you want to <strong>learn, build, or change.</strong></p><span data-in>LET'S MAKE IT HAPPEN TOGETHER.</span></div>`;
 
@@ -118,6 +139,12 @@ $('#overview-list').innerHTML = slides.map((slide, i) => `<button class="overvie
 
 function animateEntrance(root = scene) {
   if (reduceMotion.matches) return;
+  if ($('.policy-scene', root)) {
+    const tl = gsap.timeline();
+    tl.fromTo($$('[data-in]', root), { autoAlpha: 0, y: 28 }, { autoAlpha: 1, y: 0, duration: .55, stagger: .11, ease: 'power3.out', clearProps: 'transform,opacity,visibility' });
+    if ($('.policy-matrix__bar', root)) tl.fromTo($$('.policy-matrix__bar', root), { scaleX: 0, transformOrigin: 'left center' }, { scaleX: 1, duration: .7, stagger: .1, ease: 'power2.out', clearProps: 'transform' }, '-=.38');
+    return;
+  }
   const elements = $$('[data-in]', root);
   gsap.fromTo(elements, { autoAlpha: 0, y: 22 }, { autoAlpha: 1, y: 0, duration: .72, stagger: .065, ease: 'power3.out', clearProps: 'transform,opacity,visibility' });
 }
@@ -155,18 +182,15 @@ function goTo(n) {
   transitioning = true;
   const direction = n >= current ? 1 : -1;
   gsap.set(veil, { display: 'flex', xPercent: -104 * direction });
-  gsap.set('.transition__mark', { scale: .72, rotate: -9, autoAlpha: 0, clipPath: 'inset(0 100% 0 0)' });
   const tl = gsap.timeline({ onComplete: () => {
     gsap.set(veil, { display: 'none' });
     transitioning = false;
     if (queued !== null && queued !== current) { const next = queued; queued = null; goTo(next); }
     else queued = null;
   } });
-  tl.to(veil, { xPercent: 0, duration: .48, ease: 'power3.inOut' })
-    .to('.transition__mark', { scale: 1, rotate: 0, autoAlpha: 1, clipPath: 'inset(0 0% 0 0)', duration: .48, ease: 'power3.out' }, '-=.18')
+  tl.to(veil, { xPercent: 0, duration: .38, ease: 'power3.inOut' })
     .add(() => render(n))
-    .to('.transition__mark', { scale: 1.08, autoAlpha: 0, duration: .28, ease: 'power2.in' }, '+=.06')
-    .to(veil, { xPercent: 104 * direction, duration: .55, ease: 'power3.inOut' }, '-=.15');
+    .to(veil, { xPercent: 104 * direction, duration: .42, ease: 'power3.inOut' });
 }
 
 function openOverview() {

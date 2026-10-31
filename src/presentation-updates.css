@@ -45,9 +45,6 @@
 .leader-person__meta strong{font-size:27px}
 .leader-person__meta small{font-size:12px}
 .transition{z-index:45;background:#ffc845}
-.transition__line{top:50%;opacity:.18}
-.transition__mark{position:relative;z-index:2;width:min(46vw,470px);filter:brightness(0) saturate(100%) invert(8%) sepia(50%) saturate(979%) hue-rotate(170deg) brightness(74%)}
-.transition__mark img{width:100%;height:auto}
 .hr-scene__rail{height:73%}
 .hr-scene__emblem{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
 .hr-scene__emblem img{width:min(18vw,230px);max-height:150px;object-fit:contain;object-position:left center;opacity:.75}
@@ -74,7 +71,6 @@
   .film-scene__heading h1{font-size:clamp(70px,10vw,105px)}
   .film-scene__stage{min-height:0;max-height:none}
   .film-scene__continue{display:block;margin:25px 0 0 auto}
-  .transition__mark{width:min(65vw,400px)}
   .hr-scene__emblem{display:none}
   .hr-scene__mobile-mark{display:flex;align-items:center;gap:15px;margin-bottom:25px}
   .hr-scene__mobile-mark img{width:73px;flex:none}

@@ -21,9 +21,9 @@ export const slides = [
   { chapter: 'The season', title: 'Beyond the events', kind: 'opportunities', theme: 'blue' },
   { chapter: 'Work as one', title: 'How we stay connected', kind: 'channels', theme: 'light' },
   { chapter: 'Work as one', title: 'Your voice matters', kind: 'feedback', theme: 'light' },
-  { chapter: 'Work as one', title: 'Team expectations', kind: 'hr-conduct', theme: 'night' },
-  { chapter: 'Work as one', title: 'How contributions are evaluated', kind: 'hr-evaluation', theme: 'night' },
-  { chapter: 'Work as one', title: 'Questions, support & next steps', kind: 'hr-support', theme: 'night' },
+  { chapter: 'Work as one', title: 'Monthly 100-point evaluation matrix', kind: 'hr-conduct', theme: 'night' },
+  { chapter: 'Work as one', title: 'Rules, certification & academic guarantee', kind: 'hr-evaluation', theme: 'night' },
+  { chapter: 'Work as one', title: 'Mandatory member agreement', kind: 'hr-support', theme: 'night' },
   { chapter: 'Close', title: 'One last question', kind: 'last-question', theme: 'night' },
   { chapter: 'Close', title: 'We are one family', kind: 'final', theme: 'blue' },
 ];
@@ -46,7 +46,7 @@ export const committees = [
   ]},
   { name: 'Content', short: 'Content', members: [
     { name: 'Emad Salah', role: 'Head', file: 'emad-salah' },
-    { name: 'Ahmed', role: 'Vice Head', file: 'ahmed-content' },
+    { name: 'Zeyad Yasser', role: 'Vice Head', file: 'zeyad-yasser' },
   ]},
   { name: 'Graphic Design', short: 'Graphic Design', members: [
     { name: 'Eslam Mohamed', role: 'Head', file: 'eslam-mohamed' },
