@@ -1,0 +1,126 @@
+/* Final art direction pass for the team story and supplied portraits. */
+.kicker,.eyeline{font-size:12px;letter-spacing:.1em}
+.chrome__edition{display:none}
+.progress{width:min(64vw,760px)}
+.hero__visual{display:grid;place-items:center}
+.hero__disc{width:84%;left:8%;top:12%;background:#1876aa;box-shadow:0 0 0 1px #80b5cf55}
+.hero__visual-year{position:absolute;inset:11% auto auto 7%;font:700 clamp(150px,22vw,360px)/.66 Barlow,sans-serif;letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1px #c5e8ef55;opacity:.72;transform:rotate(-8deg)}
+.hero__logo{position:relative;z-index:2;width:min(72%,460px);filter:drop-shadow(0 20px 35px #00395b);animation:hero-logo-in 1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes hero-logo-in{from{opacity:0;transform:scale(.86) rotate(-5deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+.hero__visual-index{font-size:12px}
+.team-work-scene{min-height:calc(100dvh - 185px);display:flex;flex-direction:column;justify-content:center}
+.team-work-scene h1{font-size:clamp(88px,10vw,160px);margin:24px 0 30px;max-width:1120px}
+.team-work-scene__grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-bottom:20px}
+.team-work-scene__item{border-right:1px solid var(--line);padding:15px 26px 15px 0;min-height:115px}
+.team-work-scene__item+.team-work-scene__item{padding-left:26px}
+.team-work-scene__item:last-child{border-right:0}
+.team-work-scene__item span{font:700 30px Barlow,sans-serif;color:#00629b}
+.team-work-scene__item h2{font-size:clamp(38px,4.2vw,64px);margin:8px 0 6px}
+.team-work-scene__item p{font-size:15px;max-width:290px;color:var(--muted)}
+.team-work-scene>.action-link{align-self:flex-end;background:#00629b;color:#fff}
+.team-work-scene>.action-link:hover{background:#00466e}
+.film-scene{display:grid;grid-template-columns:34% 1fr;grid-template-rows:1fr auto;column-gap:5%;align-items:center;min-height:calc(100dvh - 185px)}
+.film-scene>.kicker{position:absolute;top:110px;left:clamp(28px,5.5vw,104px)}
+.film-scene__heading h1{font-size:clamp(78px,7.7vw,124px);margin-bottom:24px}
+.film-scene__heading p{font-size:18px;color:var(--muted);max-width:310px}
+.film-scene__stage{position:relative;aspect-ratio:16/9;max-height:480px;min-height:340px;overflow:hidden;background:#00629b;border:1px solid #7dbbd0;box-shadow:20px 20px 0 #00629b33}
+.film-scene__stage:before{content:'IEEE / ZC-SB';position:absolute;z-index:1;left:4%;top:6%;font:500 12px Mono,monospace;letter-spacing:.12em;color:#d5e9f2;pointer-events:none}
+.film-scene__stage video{display:block;width:100%;height:100%;object-fit:contain;background:#063252}
+.film-scene__play{position:absolute;z-index:2;inset:0;display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;background:linear-gradient(140deg,#00629bf2,#082e51e8);border:0;color:#fff;cursor:pointer}
+.film-scene__play[hidden]{display:none}
+.film-scene__play span{display:grid;place-items:center;width:86px;height:86px;padding-left:4px;border:1px solid #ffe18b;border-radius:50%;font-size:26px;color:#ffe18b;transition:transform .3s,background .3s}
+.film-scene__play strong{font:700 17px Barlow,sans-serif;letter-spacing:.12em}
+.film-scene__play:hover span{transform:scale(1.12);background:#ffc84533}
+.film-scene__continue{grid-column:2;justify-self:end;align-self:start;margin-top:24px;background:transparent;border:0;border-bottom:1px solid #ffc845;padding:0 0 10px;color:#fff;font:700 15px Barlow,sans-serif;letter-spacing:.07em}
+.film-scene__continue span{margin-left:35px;color:#ffc845;font-size:23px}
+.leader-person__visual{background:#0870a4}
+.leader-person:nth-child(2) .leader-person__visual{background:#0e5f91}
+.leader-person__visual.has-photo:after{display:none}
+.leader-person__photo{object-fit:contain;object-position:center bottom;transform:scale(1);transform-origin:center bottom}
+.leader-person:hover .leader-person__photo,.leader-person:focus-visible .leader-person__photo{transform:scale(1.03)}
+.leader-person__visual.has-no-photo{background:#0d4c72}
+.leader-person__monogram{position:absolute;inset:0;display:grid;place-items:center;font:700 clamp(90px,14vw,185px)/1 Barlow,sans-serif;color:transparent;-webkit-text-stroke:1px #c4e5f099;letter-spacing:-.08em}
+.portrait-modal__photo{object-position:center bottom;transform:scale(1.1);transform-origin:center 65%}
+.portrait-modal__monogram{font:700 clamp(140px,23vw,280px)/1 Barlow,sans-serif;color:transparent;-webkit-text-stroke:1px #c4e5f099;letter-spacing:-.08em}
+.leader-person__meta strong{font-size:27px}
+.leader-person__meta small{font-size:12px}
+.transition{z-index:45;background:#ffc845}
+.transition__line{top:50%;opacity:.18}
+.transition__mark{position:relative;z-index:2;width:min(46vw,470px);filter:brightness(0) saturate(100%) invert(8%) sepia(50%) saturate(979%) hue-rotate(170deg) brightness(74%)}
+.transition__mark img{width:100%;height:auto}
+.hr-scene__rail{height:73%}
+.hr-scene__emblem{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.hr-scene__emblem img{width:min(18vw,230px);max-height:150px;object-fit:contain;object-position:left center;opacity:.75}
+.hr-scene__emblem strong{font:700 clamp(34px,3.4vw,53px)/.85 Barlow,sans-serif;color:#ffd264;letter-spacing:.015em}
+.hr-scene__rail small{font-size:12px}
+.hr-scene__mobile-mark{display:none}
+.final-scene{display:flex;align-items:flex-start;justify-content:center;padding-top:0}
+.final-scene__content{z-index:5;padding-top:12px;pointer-events:auto}
+.final-scene__content>img{width:98px;margin-bottom:8px}
+.final-scene h1{font-size:clamp(86px,9vw,122px);text-shadow:0 4px 25px #00477788}
+.final-scene p{font-size:19px;margin:11px 0}
+.final-scene .action-link{min-height:42px;min-width:183px;font-size:11px}
+.final-scene__people{display:block;opacity:1;mask-image:linear-gradient(to bottom,transparent 9%,#000 34%);z-index:1}
+.final-scene__people:before{content:'';position:absolute;inset:44% 0 0;background:linear-gradient(transparent,#005384 44%,#003f69);z-index:0}
+.final-scene__people .final-scene__member{position:absolute;left:var(--x);bottom:1%;width:11%;height:31%;object-fit:contain;object-position:bottom;transform:translateX(-50%);filter:drop-shadow(0 6px 8px #002c4f);opacity:.94;z-index:1}
+.final-scene__people .final-scene__member:nth-child(even){bottom:5%;height:27%;opacity:.82}
+.final-scene__people .final-scene__middle{position:absolute;left:var(--x);bottom:0;width:21%;height:38%;object-fit:contain;object-position:bottom;transform:translateX(-50%);filter:drop-shadow(0 12px 18px #002c4f);z-index:2}
+.final-scene__people .final-scene__front{position:absolute;left:var(--x);bottom:-2%;width:24%;height:44%;object-fit:contain;object-position:bottom;transform:translateX(-50%);filter:drop-shadow(0 18px 25px #002b50);z-index:calc(3 + var(--z))}
+@media(max-width:800px){
+  .team-work-scene h1{font-size:clamp(76px,10vw,105px);margin-bottom:32px}
+  .film-scene{display:block;min-height:0}
+  .film-scene>.kicker{position:static}
+  .film-scene__heading{margin:26px 0}
+  .film-scene__heading h1{font-size:clamp(70px,10vw,105px)}
+  .film-scene__stage{min-height:0;max-height:none}
+  .film-scene__continue{display:block;margin:25px 0 0 auto}
+  .transition__mark{width:min(65vw,400px)}
+  .hr-scene__emblem{display:none}
+  .hr-scene__mobile-mark{display:flex;align-items:center;gap:15px;margin-bottom:25px}
+  .hr-scene__mobile-mark img{width:73px;flex:none}
+  .hr-scene__mobile-mark strong{font:700 26px Barlow,sans-serif;color:#ffd264}
+  .final-scene{min-height:calc(100dvh - 185px);padding-top:12px}
+  .final-scene__people{display:block}
+  .final-scene__content>img{width:100px}
+  .final-scene h1{font-size:clamp(74px,11vw,110px)}
+  .final-scene__people .final-scene__member{width:18%;height:25%}
+  .final-scene__people .final-scene__member:nth-child(even){height:21%;bottom:3%}
+  .final-scene__people .final-scene__middle{width:28%;height:30%}
+  .final-scene__people .final-scene__front{width:38%;height:40%}
+}
+@media(max-width:520px){
+  .hero__logo{width:69%}.hero__visual-year{font-size:180px}
+  .team-work-scene{min-height:calc(100dvh - 185px)}
+  .team-work-scene h1{font-size:clamp(63px,12vw,80px);margin:20px 0 26px}
+  .team-work-scene__grid{display:block;margin-bottom:20px}
+  .team-work-scene__item,.team-work-scene__item+.team-work-scene__item{min-height:0;padding:13px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .team-work-scene__item h2{font-size:36px;margin:0}
+  .team-work-scene__item p{font-size:13px}
+  .team-work-scene>.action-link{min-height:48px}
+  .film-scene__heading h1{font-size:70px}
+  .film-scene__heading p{font-size:15px}
+  .film-scene__stage{aspect-ratio:4/3}
+  .film-scene__play span{width:68px;height:68px}
+  .leader-person__visual{height:175px}
+  .leader-person__monogram{font-size:100px}
+  .final-scene h1{font-size:70px}
+  .final-scene p{font-size:16px}
+  .final-scene__people .final-scene__member{width:25%;height:30%;bottom:8%}
+  .final-scene__people .final-scene__member:nth-child(even){bottom:12%;height:26%}
+  .final-scene__people .final-scene__middle{width:41%;height:39%;bottom:8%}
+  .final-scene__people .final-scene__front{width:56%;height:44%;bottom:8%}
+}
+@media(prefers-reduced-motion:reduce){.hero__logo{animation:none}}
+
+/* A stepped group portrait keeps every available face visible at the sides.
+   The chair and vice chair occupy the two raised central positions. */
+.final-scene__content>img{width:87px;margin-bottom:6px}
+.final-scene h1{font-size:clamp(80px,8.2vw,112px)}
+.final-scene__people .final-scene__member.final-scene__member--rear{width:9%;height:36%;bottom:10%;opacity:.92;z-index:1}
+.final-scene__people .final-scene__member.final-scene__member--side{width:11%;height:27%;bottom:0;opacity:1;z-index:2}
+.final-scene__people .final-scene__front{width:21%;height:49%;bottom:-2%;z-index:calc(3 + var(--z))}
+@media(max-width:800px){
+  .final-scene__people .final-scene__member.final-scene__member--rear{width:15%;height:28%;bottom:8%}
+  .final-scene__people .final-scene__member.final-scene__member--side{width:17%;height:20%;bottom:7%}
+  .final-scene__people .final-scene__front{width:51%;height:46%;bottom:7%}
+}
